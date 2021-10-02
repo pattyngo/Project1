@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Pattistry Cat Cafe</title>
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+  </head>
+  
+  
+  <body>
+    <header>
+        <!--     go to ordering and outside screens -->
+    <div class="order">
+      <a href="order.html"
+        ><img
+          src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Forder.png?v=1632343637657" width="140px"
+      /></a>
+    </div>
+    <div class="outbtn">
+      <a href="outside.html"
+        ><img
+          src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Foutsign.png?v=1632944401698" width="140px"
+      /></a>
+    </div>
+    </header>
+    <!--     wall art -->
+    <div class="wallart">
+      <div class="painting1">
+        <img src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2FUntitled_Artwork%204.jpg?v=1632909146465"width="150px"/>
+      </div>
+      <div class="painting2">
+        <img src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2FUntitled_Artwork%203.jpg?v=1632299643048"width="150px"/>
+      </div>
+      <div class="painting3">
+        <img src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2FUntitled_Artwork%205.jpg?v=1632910449578" width="200px">
+      </div>
+    </div>
+  
+<!--       insert tables and chairs -->
+    <div class="table">
+      <img
+        src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Ftable.png?v=1632308807072"
+        width="33%"
+      />
+      <img
+        src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Ftable.png?v=1632308807072"
+        width="33%"
+      />
+      <img
+        src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Ftable.png?v=1632308807072"
+        width="33%"
+      />
+    </div>
+    <!--     cats -->
+    <div class="kitties">
+      <img
+        src="https://cdn2.scratch.mit.edu/get_image/gallery/25153208_170x100.png"
+        width="200px"
+      />
+      <img
+        src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Forange-cat.gif?v=1632341797064"
+        width="250px"
+      />
+    </div>
+    <!--     bg noise -->
+    <div class="volumes">
+      <h3>
+        Background Volume
+      </h3>
+      <p>Toggle Cafe Noises (source: <a href="https://www.youtube.com/watch?v=Cpfacys_U0o&t=14s&ab_channel=Lost%26Sound-Topic">Lost & Sound</a>)</p>
+      <video id="video"width="0" height="0" autoplay loop><source src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2FBusy%20Coffee%20Shop%20Background%20Noise.mp4?v=1632895560064" type="video/mp4"></source></video>
+      <div class="volumeSlider">
+        <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" class="slider"></input>
+      </div>
+      <p>Toggle Cat Noises (source: <a href="https://freesound.org/search/?q=meow">Freesound</a>)</p>
+      <video id="video"width="0" height="0" autoplay loop><source src="https://cdn.glitch.com/d426f86b-26aa-4f1e-a83a-97745dec8816%2Fmeow.mp4?v=1632898871096" type="video/mp4"></source></video>
+      <div class="volumeSlider">
+        <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVoolume(this.value)" onchange="SetVoolume(this.value)" class="slider"></input>
+      </div>
+      <p>
+         (use headphones for a better experience)
+      </p>
+    </div>
+<!--     bg music -->
+    <footer>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/5qap5aO4i9A?controls=0&amp;start=2&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    <div class="music">
+      <h2>
+        Music courtesy of
+        <a href="https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow">Lofi Girl</a> on YouTube
+      </h2>
+    </div>
+    </footer>
+    
+  
+  <script>
+      function SetVolume(val)
+      {
+          var player = document.getElementById('video');
+          console.log('Before: ' + player.volume);
+          player.volume = val / 100;
+          console.log('After: ' + player.volume);
+      }
+          function SetVoolume(val)
+      {
+          var player = document.getElementById('video');
+          console.log('Before: ' + player.volume);
+          player.volume = val / 100;
+          console.log('After: ' + player.volume);
+      }
+  </script>
+  </body>
+  
+</html>
